@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <p>© 2025 Ritik Mathur. All Rights Reserved.</p>
         <div className="social-icons">
-          <a href="" className="icon github" />
+          <a href="https://github.com/RITIKMATHUR442/-ShoppyGlobe-E-commerce-Application/tree/main" className="icon github" />
           <a href="https://www.facebook.com/ritik.mathur.902/" className="icon facebook" />
           <a href="https://www.instagram.com/mr_mathur.902?igsh=MTI0OXhsYnBiNDU2eA==" className="icon instagram" />
         </div>
