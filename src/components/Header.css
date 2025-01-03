@@ -1,0 +1,138 @@
+/* Header Styles */
+header {
+  background: transparent;
+  color: blue;
+  padding: 20px 30px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  position: fixed;
+  top: 0;
+  right: 0; /* Align header to the top right corner */
+  width: 100%;
+  z-index: 100;
+  animation: slideDown 0.5s ease, fadeIn 1s ease;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+}
+
+/* Animation for header sliding down */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation for header */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left inside the navbar */
+  align-items: center;
+  animation: fadeIn 1.5s ease;
+}
+
+nav a {
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6347;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+nav a:hover {
+  color: #ff6347;
+  transform: scale(1.1);
+  letter-spacing: 2px;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+/* Background effect for hover */
+nav a:hover {
+  background: rgba(255, 99, 71, 0.1);
+  border-radius: 5px;
+}
+
+/* Responsive Design: Medium to small screens (up to 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    flex-direction: row; /* Keep the nav items in a row */
+    justify-content: flex-start; /* Align items to the left */
+  }
+
+  nav a {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive Design for very small screens (up to 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 0px 15px;
+  }
+
+  nav {
+    flex-direction: row; /* Keep the nav items in a row */
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* For large screens (1025px and above) */
+@media (min-width: 1025px) {
+  header {
+    padding: 0px 40px;
+  }
+
+  nav {
+    justify-content: flex-start; /* Align items to the left */
+  }
+
+  nav a {
+    font-size: 20px;
+    padding: 15px 25px;
+  }
+}

@@ -1,0 +1,40 @@
+.footer {
+  background-color: silver;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.github {
+  background-image: url('https://cdn.icon-icons.com/icons2/3685/PNG/512/github_logo_icon_229278.png');
+}
+
+.facebook {
+  background-image: url('https://gallerypngs.com/wp-content/uploads/2024/05/facebook-logo-no-background.png')
+}
+
+.instagram {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg');
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,183 @@
+/* OrderPage Styles */
+.order-page {
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease, slideUp 0.5s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on the entire order page */
+.order-page:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation for the order page */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Header styling */
+.order-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff6347;
+  font-size: 2.5rem;
+  animation: slideIn 0.6s ease;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on the header */
+.order-page h1:hover {
+  color: #ff4500;
+}
+
+/* Slide-in animation for the header */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* OrderForm Styles */
+.order-form {
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 20px auto;
+  animation: fadeIn 0.8s ease, slideInForm 0.5s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide-in animation for the form */
+@keyframes slideInForm {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Input fields styling */
+.order-form input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Focus effect on input fields */
+.order-form input:focus {
+  border-color: #ff6347;
+  background-color: rgba(255, 99, 71, 0.1);
+  outline: none;
+}
+
+/* Button styling */
+.order-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6347;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+.order-form button:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+.order-form button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .order-page {
+    padding: 25px;
+  }
+
+  .order-form {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .order-form input,
+  .order-form button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-page {
+    padding: 20px;
+  }
+
+  .order-form {
+    padding: 15px;
+  }
+
+  .order-form input {
+    width: calc(100% - 15px);
+  }
+
+  .order-form button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-page {
+    padding: 15px;
+  }
+
+  .order-form {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .order-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .order-form input,
+  .order-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

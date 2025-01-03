@@ -1,0 +1,278 @@
+/* Base styles for the ProductDetails component */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #1a237e, #64b5f6);
+  color: #333;
+  animation: backgroundColorChange 5s infinite alternate;
+}
+
+@keyframes backgroundColorChange {
+  0% { background: linear-gradient(to bottom right, #1a237e, #64b5f6); }
+  50% { background: linear-gradient(to bottom right, #0288d1, #81d4fa); }
+  100% { background: linear-gradient(to bottom right, #1a237e, #64b5f6); }
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.card {
+  flex: 1 1 calc(60% - 1rem);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  max-width: 600px;
+  min-width: 320px;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  background: linear-gradient(to right, #283593, #1e88e5);
+  color: #ffffff;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { background: linear-gradient(to right, #283593, #1e88e5); }
+  50% { background: linear-gradient(to right, #1e88e5, #0288d1); }
+  100% { background: linear-gradient(to right, #283593, #1e88e5); }
+}
+
+.card-content {
+  padding: 2rem;
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  color: #424242;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid #1e88e5;
+  border-radius: 12px 12px 0 0;
+  max-height: 500px; /* Increase image size */
+}
+
+.product-details h1 {
+  font-size: 2.2rem;
+  color: #1e88e5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(30, 136, 229, 0.5);
+}
+
+.product-details p {
+  font-size: 1.2rem;
+  margin: 0.75rem 0;
+  color: #424242;
+  line-height: 1.8;
+}
+
+/* Color and Emoji Customizations */
+.product-details p.price::before {
+  content: "💰 Price: ";
+  color: #4caf50;
+}
+
+.product-details p.discounted-price::before {
+  content: "🔥 Discounted Price: ";
+  color: #ff5722;
+}
+
+.product-details p.stock::before {
+  content: "📦 Stock: ";
+  color: #009688;
+}
+
+.product-details p.brand::before {
+  content: "🏷️ Brand: ";
+  color: #673ab7;
+}
+
+.product-details p.description::before {
+  content: "📝 Description: ";
+  color: #ff9800;
+}
+
+.product-details p.weight::before {
+  content: "⚖️ Weight: ";
+  color: #3f51b5;
+}
+
+.product-details p.discount::before {
+  content: "💸 Discount: ";
+  color: #cddc39;
+}
+
+.product-details p.min-order-quantity::before {
+  content: "📊 Minimum Order Quantity: ";
+  color: #e91e63;
+}
+
+.product-details p.return-policy::before {
+  content: "🔄 Return Policy: ";
+  color: #607d8b;
+}
+
+.product-details p.warranty::before {
+  content: "🛠️ Warranty: ";
+  color: #9c27b0;
+}
+
+/* Advanced Button Styles */
+button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to right, #f57f17, #ffa000);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 1.8s infinite;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ffa000, #f57f17);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Reviews Section */
+.review {
+  background: linear-gradient(to right, #ffe082, #ffeb3b);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 6px solid #fbc02d;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Limit width of reviews */
+}
+
+.review strong {
+  font-size: 1.4rem;
+  color: #f57f17;
+}
+
+.review p {
+  margin: 0.5rem 0;
+  color: #6d4c41;
+  font-style: italic;
+}
+
+/* Enhanced Animations */
+.card {
+  animation: fadeInUp 0.9s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+  animation: pulse 1.8s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+  .card img{
+    max-height: 300px; /* Decrease image size */
+  }
+
+  
+  button {
+    width: 100%;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    font-size: 1.5rem;
+  }
+
+  .product-details h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .review {
+    max-width: 100%; /* Allow reviews to take up full width on very small screens */
+  }
+}

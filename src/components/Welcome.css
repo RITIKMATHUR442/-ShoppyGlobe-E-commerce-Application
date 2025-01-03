@@ -1,0 +1,121 @@
+/* Base Styles for the Welcome Page */
+.welcome-page {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+    url('https://asean.org/wp-content/uploads/elementor/thumbs/Cover-q4beoignaot8knz2ljn64j2q5q7593ph75fnx2ltew.png'),
+    url('https://indbiz.gov.in/wp-content/uploads/2021/01/online-shopping-ecommerce-and-delivery-service-concept-paper-cartons-picture-id1024926532.jpg'),
+    url('https://diib.com/learn/wp-content/uploads/2020/10/best-ecommerce-website-design-cover.jpg'),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdh7gPGyQql7cJObOlQnkbyhSey2hLmTlVNlZ8xXAyZfS4MtBVR7c9SG1udBiJ5tTWsS0&usqp=CAU'),
+    url('https://advancedbytez.com/wp-content/uploads/2022/03/Accessibility-for-your-Online-eCommerce-Store.jpg'); /* Replace with your background image URLs */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: backgroundSlide 25s infinite; /* Set the duration for the slide */
+  transition: background-color 0.3s ease;
+}
+
+/* Centered Text Styles */
+.centered-text {
+  text-align: center;
+  color: rgb(129, 65, 65);
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeInText 2s ease-out, slideInText 1s ease-out;
+}
+
+/* Fade In Text Animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide In Text Animation */
+@keyframes slideInText {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for Background Animation */
+@keyframes backgroundSlide {
+  0% {
+    background-image: url('https://asean.org/wp-content/uploads/elementor/thumbs/Cover-q4beoignaot8knz2ljn64j2q5q7593ph75fnx2ltew.png');
+  }
+  20% {
+    background-image: url('https://indbiz.gov.in/wp-content/uploads/2021/01/online-shopping-ecommerce-and-delivery-service-concept-paper-cartons-picture-id1024926532.jpg');
+  }
+  40% {
+    background-image: url('https://diib.com/learn/wp-content/uploads/2020/10/best-ecommerce-website-design-cover.jpg');
+  }
+  60% {
+    background-image: url('https://5.imimg.com/data5/SELLER/Default/2021/10/YL/KC/NY/12354778/ecommerce-online-shopping-website.png');
+  }
+  80% {
+    background-image: url('https://advancedbytez.com/wp-content/uploads/2022/03/Accessibility-for-your-Online-eCommerce-Store.jpg');
+  }
+  100% {
+    background-image: url('https://asean.org/wp-content/uploads/elementor/thumbs/Cover-q4beoignaot8knz2ljn64j2q5q7593ph75fnx2ltew.png');
+  }
+}
+
+/* Button Styles */
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(to right, #f57f17, #ffa000);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .welcome-page {
+    background-position: center center; /* Center background on small screens */
+  }
+
+  .centered-text {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  button {
+    padding: 0.8rem 1.5rem; /* Smaller padding for buttons */
+    font-size: 1rem; /* Smaller button text */
+  }
+}
+
+/* Responsive Design for Large Screens */
+@media (min-width: 1200px) {
+  .welcome-page {
+    background-position: center center; /* Ensure good background on large screens */
+  }
+
+  .centered-text {
+    font-size: 2.5rem; /* Larger text for large screens */
+  }
+
+  button {
+    padding: 1.2rem 2.5rem; /* Larger button padding */
+    font-size: 1.3rem; /* Larger button text */
+  }
+}

@@ -1,0 +1,197 @@
+/* CheckoutPage Styles */
+.checkout-page {
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: white;
+  padding: 80px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #ff6347;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+}
+
+.card button:active {
+  transform: scale(0.95);
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.card th, .card td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.card th {
+  background-color: #f4f4f4;
+}
+
+.card img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.card td p {
+  margin: 0;
+}
+
+.card .price-details {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+.card .price-details p {
+  margin: 5px 0;
+}
+
+.card .price-details p span {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card table {
+    font-size: 14px;
+  }
+
+  .card img {
+    width: 300px;
+  }
+
+  .card button {
+    padding: 5px 10px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: white;
+  padding: 80px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+/* Add styles for the headings */
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Add styles for the paragraphs */
+.card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Add styles for the buttons */
+.card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #2980b9;
+}
+
+/* Add styles for the payment method options */
+.payment-method {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-method li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-method li:hover {
+  background-color: #e9e9e9;
+}
+
+.payment-method li.selected {
+  background-color: #d9d9d9;
+  border-color: #3498db;
+}
