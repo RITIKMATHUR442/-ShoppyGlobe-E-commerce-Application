@@ -8,7 +8,6 @@ const Header = () => {
         <Link to="/">Home</Link> {/* Link to the Welcome page */}
         <Link to="/products">Products</Link> {/* Link to the Home page renamed as Products */}
         <Link to="/cart">Cart</Link>
-        <Link to="/checkout">Checkout</Link> {/* Link to the Checkout page */}
       </nav>
     </header>
   );
